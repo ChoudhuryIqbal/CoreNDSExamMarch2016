@@ -1,4 +1,6 @@
 package datastructure;
+import java.util.LinkedList;
+import java.util.Iterator;
 
 public class UseLinkedList {
 
@@ -8,6 +10,19 @@ public class UseLinkedList {
 		 * Use For Each loop and while loop with Iterator to retrieve data.
 		 * 
 		 */
+		LinkedList< String> list =new LinkedList<>();
+		list.add("NY");
+		list.add("CA");
+		list.add(" AZ ");
+
+		Iterator it=list.iterator();
+		while(it.hasNext()){
+			System.out.println(it.next());
+
+		}
+
+
+
 
 	}
 

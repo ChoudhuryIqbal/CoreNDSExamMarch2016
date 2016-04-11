@@ -1,4 +1,5 @@
 package datastructure;
+import java.util.Stack;
 
 public class UseStack {
 
@@ -8,6 +9,15 @@ public class UseStack {
 		 * Use For Each loop and while loop with Iterator to retrieve data.
 		 * 
 		 */
+
+		Stack <String> stack=new Stack<>();
+		stack.push("Co");
+		stack.push("Fl");
+		stack.push("NJ");
+
+		System.out.println(stack.peek());
+		System.out.println(stack.pop());
+
 	}
 
 }

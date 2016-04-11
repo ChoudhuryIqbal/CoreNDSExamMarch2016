@@ -9,7 +9,27 @@ public class PrimeNumber {
 		 * Out put number of Prime numbers on the given range.
 		 * 
 		 */
+		long limit = 1000000;
 
-	}
+		for(long number = 2; number<=limit; number++){
+			if(isPrime(number)){
+				System.out.println(number);
+					}
+				}
 
-}
+			}
+
+
+			public static boolean isPrime(long number){
+				for(int i=2; i<number; i++){
+					if(number%i == 0){
+						return false;
+					}
+				}
+				return true;
+			}
+		}
+
+
+
+

@@ -1,6 +1,6 @@
 package oop.design;
 
-public class EmployeeInfo{
+public class EmployeeInfo extends EmployeeAbstract{
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -16,7 +16,13 @@ public class EmployeeInfo{
 	/*
 	 * declare few static and final fields and some non-static fields
 	 */
+	static int pension;
+	static int bonus;
+	final int bestPerformance=10;
+	final int averagePerformance=6;
 	static String companyName;
+	public final int weekHour=40;
+
 	
 	/*
 	 * You must implement the logic for below 2 methods and 
@@ -29,10 +35,11 @@ public class EmployeeInfo{
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
+		System.out.println("EmployeeId of this employee "+ employeeId);
 		
 	}
     public EmployeeInfo(String name, int employeeId){
-		
+		System.out.println("name of this employee "+name);
 	}
 	
 	/*
@@ -43,9 +50,17 @@ public class EmployeeInfo{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeBonus(){
+	public static int calculateEmployeBonus(int employeePerformance,int salary){
 		int total=0;
-		return total;
+		if(employeePerformance>=0){
+			total=(int)(salary*.10);
+
+		}
+		if((employeePerformance>=6)&& (employeePerformance<10)){
+			total=(int)(salary*.08);
+		}
+		bonus+=total;
+		return bonus;
 	}
 	
 	/*
@@ -55,8 +70,28 @@ public class EmployeeInfo{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployePension(){
+	public static int calculateEmployePension(int salary,int year){
 		int total=0;
-		return total;
+
+
+		if(year==1){
+			total=(int)(salary*.05);{
+
+			}
+
+
+
+		}
+		if(year==2){
+			total=(int)(salary*.10);
+		}
+		pension=pension+total;
+
+		return pension;
+	}
+
+	@Override
+	public int yearsWorked(int years) {
+		return workingYear=years;
 	}
 }

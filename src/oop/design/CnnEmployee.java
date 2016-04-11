@@ -12,6 +12,14 @@ public class CnnEmployee {
 	 * 
 	 **/
 	public static void main(String[] args) {
+		EmployeeInfo employee1=new EmployeeInfo("Shakib",75);
+		employee1.assignDepartment("Reporter");
+		employee1.vacation=true;
+		employee1.yearsWorked(2);
+		employee1.calculateSalary();
+		employee1.employeeId();
+		employee1.employeeName();
+
 		
 		
 		
